@@ -1,0 +1,4 @@
+full name
+username
+email
+enrolled list of groups

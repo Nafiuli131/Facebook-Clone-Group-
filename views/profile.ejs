@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+	<link rel="stylesheet" href="stylepro.css">
+	<link rel="stylesheet" href="button.css">
+	
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body background-image: url(background.jpg)>
+
+
+
+
+ <div class="profile">
+ 	<div class="title">
+       <h1>My Profile</h1>
+ 	</div>
+    <div class="main-container">
+		<p><font size= "8"><i>Full Name </i> </font></p>
+		<h3><%= infos.firstName %>  <%= infos.lastName %> </h1>
+		<hr>
+		<hr>
+		<p><font size= "8"><i>Email </i> </font></p>
+		<h3><%= infos.eMail %></h3>
+		<p><font size= "8"><i>Username </i> </font></p>
+		<h3><%= infos.username %></h3>
+		<hr> <hr> <hr>
+		
+		<button	class="button button1">
+		<a href = "/editProfile" ,"http://example.com/" style="color:#ffffff;">Edit your profile</a>
+		</button>
+		<button	class="button button1">
+		<a href = "/grouphome","http://example.com/" style="color:#ffffff;"">Create a new Group</a>
+		</button>
+		<button class="button button1">
+			<a href = "/myToDos",,"http://example.com/" style="color:#ffffff;">My Todos...</a>
+		</button>
+		<br>
+		<button class="button button1">
+				<a href = "/getGroupList",,"http://example.com/" style="color:#ffffff;">Enrolled Groups</a>
+		</button>
+		<button class="button button1">
+				<a href = "/logout",,"http://example.com/" style="color:#ffffff;">Log Out</a>
+		</button>
+
+		
+		</td>
+			</tbody>
+	</table>	
+
+ </div>
+
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+db.createUser({
+    user: "taoseef",
+    pwd: "12345",
+    roles: ["readWrite", "dbAdmin"]
+});
+
+db.createCollection('users');
+
+show collections
+
+db.users.insert({
+    username: "taoseef",
+    password: "12345"
+});
+
+db.users.find();
+
+show dbs

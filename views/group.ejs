@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Todo Crud Application</title>
+  </head>
+
+<body>
+<h1>welcome to your new group</h1>
+
+<form action="/createPost" enctype="multipart/form-data" method="POST">
+    <input type = "textarea" name= "post" placeholder = "What's on your mind??">
+    <input type="file" name="postFile" />
+    <button>Create Post</button>
+</form>
+
+        <table class="table table-inverse">
+                <thead>
+                  <tr>
+                    <th>Post</th>
+                    <th>Created by</th>
+                    <th>Created on</th>
+                    <th>Uploaded File</th>
+          
+                  </tr>
+                </thead>
+          
+                <tbody>
+                  <% for(var i=0; i < infos.length; i++) { %>
+                 <tr>
+          
+                   <td><%= infos[i].post %></td>
+                   <td><%= infos[i].createdby %></td>
+                   <td><%= infos[i].postDateTime %></td>
+                   <td><a href=" <%= '/download/' + infos[i].fileName %> "><%= infos[i].originalName %></a></td>
+        
+                 </tr>
+              <% } %>
+                </tbody>
+          
+              </table>
+
+              <button class="button button1">
+                <a href = "/homepage","http://example.com/" style="color:#00000;">Homepage</a>
+            </button>
+
+            <button class="button button1">
+              <a href = "/profile","http://example.com/" style="color:#00000;">Profile</a>
+          </button>
+
+              <button class="button button1">
+                  <a href = "/logout","http://example.com/" style="color:#00000;">Log Out</a>
+              </button>
+
+              
+        
+</body>
+</html>

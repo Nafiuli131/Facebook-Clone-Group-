@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>My Todos</title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body background="dd.jpg">
+        <h1> My todo list </h1>
+
+        <table class="table table-inverse">
+                <thead>
+                  <tr>
+                    <th>Things to do</th>
+        
+          
+                  </tr>
+                </thead>
+          
+                <tbody>
+                  <% for(var i=0; i < infos.length; i++) { %>
+                 <tr>
+                     <% if(profile == infos[i].createdby){ %>
+                      <td>
+                      <form action="/updateTodo" method="POST">
+                        <input type = "text" name= "todo" value=<%= infos[i].todoList %>>
+                        <button> Update </button>
+                        <button><a href = "/delete/<%= infos[i]._id %>"> Delete </a></button>
+                      </form>
+                      </td>
+                 <% } %>
+          
+                 </tr>
+              <% } %>    
+                </tbody>
+          
+              </table>
+
+        <h1>Update your todos here</h1>
+        <form action="/myToDos" method="POST">
+            <input type = "text" name= "todo" placeholder = "update your todo list">
+            <button>Add new Todo</button>
+        </form>
+        <a href = "/homepage">Back to Home Page</a>
+       
+
+</html>

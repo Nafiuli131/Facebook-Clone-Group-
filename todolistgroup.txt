@@ -1,0 +1,3 @@
+group name:
+group type: (select option rakhis) 1. education 2. business  3. Technical Discussion   4. Friendly Discussion   5. Group Project
+Group Objective:

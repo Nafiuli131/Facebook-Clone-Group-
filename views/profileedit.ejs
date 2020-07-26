@@ -1,0 +1,42 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+    <link rel="stylesheet" href="stylepro.css">
+    <link rel="stylesheet" href="button.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <h1> <%= viewTitle %> </h1>
+    <div class="profile">
+        <div class="title">
+        <h1>My Profile</h1>
+        </div>
+        <div class="main-container">
+                <form action="/editProfile" method="POST">
+                    <p><font size= "4">First Name </font></p>
+                <input type = "text" name= "firstName" placeholder = "firstName" value=<%= infos.firstName %>> <br> <hr>
+                <p><font size= "4">Last Name </font></p>
+                <input type = "text" name= "lastName" placeholder = "lastName" value=<%= infos.lastName %>> <br> <hr>
+                <p><font size= "4">Username </font></p>
+                <input type = "text" name= "username" placeholder = "username" value=<%= infos.username %>> <br> <hr>
+                <p><font size= "4">Email </font></p>
+                <input type = "text" name= "eMail" placeholder = "youName@domainName.com" value=<%= infos.eMail %>> <br> <hr>
+                <button class="button button1">Submit</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

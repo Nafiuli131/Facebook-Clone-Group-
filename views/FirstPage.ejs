@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="Firstpage.css">
+  </head>
+
+  <body>
+    <div class="login-page">
+    <div class="form">
+         <form class="register-form" action="/register" method="POST">
+            <input type = "text" name= "firstName" placeholder = "firstName">
+            <input type = "text" name= "lastName" placeholder = "lastName">
+            <input type = "text" name= "username" placeholder = "username">
+            <input type = "text" name= "eMail" placeholder = "youName@domainName.com">
+            <input type = "password" name= "password" placeholder = "password">
+           <button>Create</button>
+           <p class="message">Already registered? <a href="#">Login</a>
+          </p>
+         </form>
+
+
+         <form class="Login-form" action="/login" method="POST">
+          <input type = "text" name= "username" placeholder = "username">
+          <input type = "password" name= "password" placeholder = "password">
+           <button>login</button>
+           <p class="message">Not register? <a href="#">Register</a>
+             </p>
+         </form>
+
+    </div>
+
+    </div>
+
+         <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+
+
+         </script>
+
+         <script>
+           $('.message a').click(function(){
+            $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+
+           });
+         </script>
+
+
+
+  </body>
+</html>

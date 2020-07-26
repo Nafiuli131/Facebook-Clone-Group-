@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+	<link rel="stylesheet" href="stylepro.css">
+	<link rel="stylesheet" href="button.css">
+	
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+ <div class="profile">
+ 	<div class="title">
+       <h1>My Profile</h1>
+ 	</div>
+    <div class="main-container">
+    	<h1><%= infos.firstName %> </h1>
+    	<h3><%= infos.eMail %></h1>
+		<h1>Enrolled list of groups</h1>
+		
+		<button	class="button button1">
+		<a href = "/editProfile" ,"http://example.com/" style="color:#ffffff;">Edit your profile</a>
+		</button>
+		<br>
+		<button	class="button button1">
+		<a href = "/grouphome","http://example.com/" style="color:#ffffff;"">Home Page</a>
+		</button>
+	</br>
+	<button class="button button1">
+		<a href = "/myToDos",,"http://example.com/" style="color:#ffffff;">My Todos...</a>
+</button>
+		<h2> Enrolled Groups </h2>
+		<table>
+			<tbody>
+			<% for(var i =1; i< infos.length; i++){ %>
+			<% for (var j = 0; j < infos[i].memberIDs.length; j++) { %>
+				<tr> <% if(infos[i].memberIDs[j] == userprofile){ %>
+					<td> <%= userprofile + "is a member of "+ infos[i].groupName %> </td>
+				<% } %>
+				</tr>
+			<% } %>
+		<% } %>
+		</td>
+			</tbody>
+	</table>	
+
+ </div>
+
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body
+{
+
+  background-image: url(sky.jpg);
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+
+
+
+	font-family: sms-serif;
+	color: #3c3939;
+	background-color: 	#696969;
+}
+.profile
+{
+	width: 700px;
+	margin: auto;
+
+	background: 	#F8F8FF;
+	
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5)
+
+
+
+}
