@@ -1,4 +1,4 @@
-# CSE327 Team95 Software Engineering Course Term Project 
+# Facebook Clone App
 >Groupee: A Web-based CRUD Application built with Node.js with Express, and ejs template engine**
 
 **Features**
